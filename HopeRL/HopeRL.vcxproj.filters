@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\HopeRL.cpp" />
+    <ClCompile Include="src\renderer\shader.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\texture.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\reource_manager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="utility">
+      <UniqueIdentifier>{2471861c-d756-4538-9a22-2918533cdbd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opengl">
+      <UniqueIdentifier>{0c42b411-a6db-43d7-95b3-6da131d5524f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="renderer">
+      <UniqueIdentifier>{7e11e5aa-1f1d-479c-a84c-de1e505fa73b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{8d9838d8-ceb6-4dad-971c-46aaa8fb5072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\textures">
+      <UniqueIdentifier>{a451fbba-b583-4d20-a1ab-3ddcb37ca599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\shaders">
+      <UniqueIdentifier>{efb67a28-c925-4be7-b7a7-e5a603f92f1d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\utility\timer.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\opengl\wglext.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\opengl\glext.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\shader.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\sprite.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\texture.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\opengl\glFuncs.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource_manager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shaders\sprite.frag">
+      <Filter>assets\shaders</Filter>
+    </None>
+    <None Include="assets\shaders\sprite.vert">
+      <Filter>assets\shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
