@@ -9,6 +9,7 @@
       <Filter>renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\reource_manager.cpp" />
+    <ClCompile Include="src\Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="utility">
@@ -53,6 +54,7 @@
       <Filter>opengl</Filter>
     </ClInclude>
     <ClInclude Include="src\resource_manager.h" />
+    <ClInclude Include="src\Game.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\sprite.frag">
@@ -61,5 +63,10 @@
     <None Include="assets\shaders\sprite.vert">
       <Filter>assets\shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\textures\dcss_tileset.png">
+      <Filter>assets\textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

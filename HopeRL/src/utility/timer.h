@@ -30,9 +30,10 @@ public:
     StartTime = GetTimestamp();
   }
 
-  inline void Stop()
+  inline double Stop()
   {
     EndTime = GetTimestamp();
+    return InMilliseconds(EndTime - StartTime);
   }
 
   inline double CurrentElapsedMS()
