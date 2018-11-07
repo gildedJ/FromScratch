@@ -7,8 +7,8 @@
 void Game::Init() {
   Texture mainTexture = ResourceManager::LoadTexture("assets/textures/dcss_tileset.png", GL_TRUE, "DCSS Tileset"); //64 x 48 tiles
   Tileset dcssTileset(mainTexture, 48, 64);
-  Sprite playerSprite = dcssTileset.MakeSprite(3, 10);
-  Sprite floorTile = dcssTileset.MakeSprite(10, 8);
+  Sprite playerSprite(dcssTileset, 3, 10);
+  Sprite floorTile(dcssTileset, 10, 8);
 
   Shader spriteShader = ResourceManager::LoadShader("assets/shaders/sprite.vert", "assets/shaders/sprite.frag", nullptr, "Sprite");
 }

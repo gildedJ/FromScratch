@@ -21,7 +21,9 @@
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\HopeRL.cpp" />
+    <ClCompile Include="src\renderer\RenderBuffer.cpp" />
     <ClCompile Include="src\renderer\shader.cpp" />
+    <ClCompile Include="src\renderer\SpriteRenderer.cpp" />
     <ClCompile Include="src\renderer\texture.cpp" />
     <ClCompile Include="src\reource_manager.cpp" />
   </ItemGroup>
@@ -30,8 +32,10 @@
     <ClInclude Include="src\opengl\glext.h" />
     <ClInclude Include="src\opengl\glFuncs.h" />
     <ClInclude Include="src\opengl\wglext.h" />
+    <ClInclude Include="src\renderer\RenderBuffer.h" />
     <ClInclude Include="src\renderer\shader.h" />
     <ClInclude Include="src\renderer\sprite.h" />
+    <ClInclude Include="src\renderer\SpriteRenderer.h" />
     <ClInclude Include="src\renderer\texture.h" />
     <ClInclude Include="src\resource_manager.h" />
     <ClInclude Include="src\utility\timer.h" />

@@ -10,6 +10,12 @@
     </ClCompile>
     <ClCompile Include="src\reource_manager.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\renderer\SpriteRenderer.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\RenderBuffer.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="utility">
@@ -55,6 +61,12 @@
     </ClInclude>
     <ClInclude Include="src\resource_manager.h" />
     <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\renderer\SpriteRenderer.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\RenderBuffer.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\sprite.frag">
