@@ -11,15 +11,17 @@ using namespace glm;
 class SpriteRenderer
 {
 public:
-  SpriteRenderer(Shader &shader);
+  SpriteRenderer();
   ~SpriteRenderer();
 
+  void SetShader(Shader &shader);
   void UseShader();
   void DrawSprite(Sprite &sprite, vec2 position, GLfloat rotate = 0.0f, vec3 color = vec3(1.0f));
-  void DrawInstancedSprites(RenderItemList &items);
+  void DrawInstancedSprites(RenderItemList const &items);
 private:
   Shader shader;
   GLuint quadVAO;
+  GLuint instanceVBO;
 
   void initRenderData();
 };

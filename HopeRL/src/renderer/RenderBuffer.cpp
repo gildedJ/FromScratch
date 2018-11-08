@@ -1,7 +1,7 @@
 #include "RenderBuffer.h"
 
 
-RenderItem::RenderItem(Sprite &sprite, vec2 position = vec2(0.0f), vec4 color = vec4(1.0f), GLfloat rotation = 1.0f)
+RenderItem::RenderItem(Sprite &sprite, vec2 position, vec4 color, GLfloat rotation)
 {
   Position = position;
   Size = vec2(sprite.Width, sprite.Height);
@@ -16,14 +16,14 @@ void RenderBuffer::BeginRender()
   Items.clear();
 }
 
-void RenderBuffer::PushSprite(Sprite &sprite, vec2 position = vec2(0.0f), vec4 color = vec4(1.0f), GLfloat rotation = 1.0f)
+void RenderBuffer::PushSprite(Sprite &sprite, vec2 position, vec4 color, GLfloat rotation)
 {
-  RenderItem item(sprite, position, color, rotation);
   if (Items.find(sprite.TextureId) == Items.end())
   {
     Items[sprite.TextureId] = RenderItemList();
+    Items[sprite.TextureId].reserve(512);
   }
-  Items[sprite.TextureId].push_back(item);
+  Items[sprite.TextureId].emplace_back(sprite, position, color, rotation);
 }
 
 void RenderBuffer::EndRender(SpriteRenderer &renderer)
@@ -31,10 +31,6 @@ void RenderBuffer::EndRender(SpriteRenderer &renderer)
   for (auto const &textureGroup : Items)
   {
     glBindTexture(GL_TEXTURE_2D, textureGroup.first);
-
-    for (auto const &item : textureGroup.second)
-    {
-
-    }
+    renderer.DrawInstancedSprites(textureGroup.second);
   }
 }
